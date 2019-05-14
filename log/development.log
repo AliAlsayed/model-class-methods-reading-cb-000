@@ -1568,3 +1568,13 @@ Processing by PostsController#index as HTML
   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 16]]
   Rendered posts/index.html.erb within layouts/application (2.3ms)
 Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=16&commit=Filter" for 92.98.236.131 at 2019-05-14 16:17:59 +0000
+Cannot render console from 92.98.236.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"16", "commit"=>"Filter"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = 16
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered posts/index.html.erb within layouts/application (15.2ms)
