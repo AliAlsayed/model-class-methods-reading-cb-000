@@ -1399,3 +1399,15 @@ Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.4ms)
   [1m[35m (0.0ms)[0m  begin transaction
   [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2019-05-13 00:00:00.000000"], ["updated_at", "2019-05-14 16:03:59.178012"], ["id", 15]]
   [1m[35m (2.1ms)[0m  commit transaction
+
+
+Started GET "/" for 92.98.236.131 at 2019-05-14 16:04:19 +0000
+Cannot render console from 92.98.236.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 18]]
+  Rendered posts/index.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 257ms (Views: 242.0ms | ActiveRecord: 1.0ms)
